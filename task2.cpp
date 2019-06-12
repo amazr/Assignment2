@@ -1,5 +1,4 @@
 #include <iostream>
-#include <array>
 using namespace std;
 
 int main() {
@@ -35,8 +34,9 @@ int main() {
 	}
 
 	//display isPrime array
+	cout << "numbers      p=1 !p=0" << endl;
 	for (int i = 0; i < arraySize; i++) {
-		cout << numbers[i] << " " << isPrime[i] << endl;
+		cout << "   " << numbers[i] << "	        " << isPrime[i] << endl;
 	}
 
 	return 0;
