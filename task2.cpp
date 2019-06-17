@@ -2,14 +2,22 @@
 using namespace std;
 
 int main() {
-	int numbers[5] = { 1, 2, 3, 4, 5 };
-	bool isPrime[5];
-	bool primeFlag = false;
+	
+	int L;
+	cout << "How many numbers would you like to check for prime-ness: ";
+	cin >> L;
 
-	int arraySize = sizeof(numbers) / sizeof(numbers[0]);
+	int numbers[L];
+	bool isPrime[L];
+	bool primeFlag = false;
+	
+	//Set the numbers array
+	for (int i = 0; i < L; i++) {
+		numbers[i] = (i + 1);
+	}
 
 	//Set the isPrime array
-	for (int i = 0; i < arraySize; i++) {
+	for (int i = 0; i < L; i++) {
 
 		if (numbers[i] < 2) {
 			primeFlag = false;
@@ -35,7 +43,7 @@ int main() {
 
 	//display isPrime array
 	cout << "numbers      p=1 !p=0" << endl;
-	for (int i = 0; i < arraySize; i++) {
+	for (int i = 0; i < L; i++) {
 		cout << "   " << numbers[i] << "	        " << isPrime[i] << endl;
 	}
 
